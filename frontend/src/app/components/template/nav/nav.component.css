@@ -1,0 +1,16 @@
+.sidevav {
+    width: 150px;
+}
+
+.sidevav a {
+    color: white;
+}
+
+.sidevav i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+    background-color: white;
+}
