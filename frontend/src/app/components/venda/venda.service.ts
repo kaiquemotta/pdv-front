@@ -47,9 +47,9 @@ export class VendaService {
         )
     }
 
-    update(categoria: VendaModel): Observable<VendaModel> {
-        const url = `${this.baseUrl}/${categoria.id}`
-        return this.http.put<VendaModel>(url, categoria).pipe(
+    update(vendaModel: VendaModel): Observable<VendaModel> {
+        const url = `${this.baseUrl}/${vendaModel.id}`
+        return this.http.put<VendaModel>(url, vendaModel).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )

@@ -3,6 +3,7 @@ export interface ProdutoModel {
     id?: number,
     nome: string,
     preco: number,
+    selected?: boolean,
     categoria: {
         id: string;
     }

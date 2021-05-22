@@ -8,10 +8,6 @@
                 campo
                 nome
             </mat-error>
-            <!--<mat-error *ngIf="produto.touched || produto.dirty && p.nome.errors && p.nome.errors.minLength">O campo precisa
-                ter no minimo 2 caracteres</mat-error>
-            <mat-error *ngIf="produto.touched || produto.dirty && p.nome.errors && p.nome.errors.maxLength">O campo poder ter no maximo
-                50 caracteres</mat-error>-->
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -20,6 +16,7 @@
                    type="number" min="0">
             <mat-error>Preencha o campo preço</mat-error>
         </mat-form-field>
+
 
         <mat-form-field appearance="outline">
             <mat-label>Categoria</mat-label>

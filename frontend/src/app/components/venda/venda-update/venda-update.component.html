@@ -1,0 +1,35 @@
+<mat-card>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Selecione o Produto</mat-label>
+            <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    <div (click)="optionClicked($event, option)">
+                        <mat-checkbox [checked]="option.selected" (change)="toggleSelection(option)"
+                                      (click)="$event.stopPropagation()">
+                            {{ option.nome }} {{ option.nome }}
+                        </mat-checkbox>
+                    </div>
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</mat-card>
+<div style="padding-bottom: 20px"></div>
+<mat-card>
+    <form>
+        <mat-list dense>
+            <mat-list-item *ngIf="itemsVenda?.length === 0"></mat-list-item>
+            <mat-list-item *ngFor="let itemVenda of itemsVenda">
+                <mat-list-item> {{ itemVenda.produtoNome }}</mat-list-item>
+                <mat-list-item> {{itemVenda.produtoPreco  | currency:'R$'}}</mat-list-item>
+                <input matInput placeholder="Digite a qntd de items" name="preco" type="number" min="1">
+                <mat-list-item>{{itemVenda.subTotal  | currency:'R$'}}</mat-list-item>
+
+
+            </mat-list-item>
+        </mat-list>
+    </form>
+</mat-card>
+

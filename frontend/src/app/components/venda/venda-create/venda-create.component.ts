@@ -12,7 +12,7 @@ import {VendaService} from "../venda.service";
 export class VendaCreateComponent implements OnInit {
 
 
-  venda: FormGroup
+  venda: FormGroup;
 
   constructor(private vendaService: VendaService,
               private router: Router,
@@ -39,12 +39,12 @@ export class VendaCreateComponent implements OnInit {
     //subscribe depois que ele recebe o retorno do back-end ele chama essa arrow function
     this.vendaService.insert(this.venda.value).subscribe(() => {
       this.vendaService.mostrarMessagem('Categoria criada com sucesso!', false)
-      this.router.navigate(["/venda"]);
+      this.router.navigate(["/venda/create"]);
     })
   }
 
   cancelar(): void {
-    this.router.navigate(["/categorias"]);
+    this.router.navigate(["/venda"]);
   }
 
 }
