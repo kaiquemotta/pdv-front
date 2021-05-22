@@ -22,6 +22,8 @@ export class VendaUpdateComponent implements OnInit {
     options: ProdutoModel[] = new Array<ProdutoModel>();
     itemsVenda: ItemVenda [] = [];
     userControl = new FormControl();
+    public cpf: number;      // propriedade que liga o html ao ts e vice-versa
+
     itemVenda: ItemVenda = {
         id: 0,
         quantidade: 1,
@@ -40,8 +42,9 @@ export class VendaUpdateComponent implements OnInit {
             this.itemVenda.produtoNome = produto.nome;
             this.itemVenda.produtoPreco = produto.preco;
             this.itemVenda.quantidade = 1;
-            this.itemVenda.subTotal = produto.preco * 3;
+            this.itemVenda.subTotal = produto.preco * 1;
             this.itemsVenda.push({...this.itemVenda})
+            console.log(this.itemsVenda)
         } else {
             const i = this.itemsVenda.findIndex(value => value.produtoNome === produto.nome && value.produtoNome === produto.nome);
             this.itemsVenda.splice(i, 1);
@@ -69,18 +72,26 @@ export class VendaUpdateComponent implements OnInit {
         this.toggleSelection(user);
     }
 
+    toggleSelectionItemVenda(itemVenda: ItemVenda) {
+        console.log(itemVenda.quantidade);
+        itemVenda.subTotal = itemVenda.quantidade * itemVenda.produtoPreco;
+        this.userControl.setValue(this.itemsVenda);
+    }
+
     private _filter(nome: string): ProdutoModel[] {
-        console.log(nome.toString())
         const filterValue = nome.toLowerCase();
         return this.options.filter(option => option.nome.toLowerCase().indexOf(filterValue) === 0);
     }
 
     private findAllCategorias(): ProdutoModel[] {
         this.produtoService.findAll().subscribe(produtos => {
-            console.log(produtos)
             produtos.map(categoria => this.options.push(categoria))
         })
         return this.options;
+    }
+
+    cadastrar() {
+        console.log(this.itemsVenda)  // valor inserido no input
     }
 
 

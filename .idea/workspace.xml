@@ -4,36 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/ItemVenda.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read-datasource.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/venda/venda.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/venda/venda.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/venda/venda.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="init item venda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-create/produto-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-create/produto-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-read2/produto-read2-datasource.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-read2/produto-read2-datasource.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/produto/produto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/produto/produto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,8 +90,16 @@
       <workItem from="1621014660991" duration="6201000" />
       <workItem from="1621255012331" duration="31281000" />
       <workItem from="1621341225290" duration="3979000" />
-      <workItem from="1621425130097" duration="35823000" />
+      <workItem from="1621425130097" duration="40098000" />
     </task>
+    <task id="LOCAL-00001" summary="init item venda">
+      <created>1621650928317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621650928317</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init item venda" />
+    <option name="LAST_COMMIT_MESSAGE" value="init item venda" />
   </component>
 </project>
