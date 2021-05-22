@@ -24,11 +24,17 @@
             <mat-list-item *ngFor="let itemVenda of itemsVenda">
                 <mat-list-item> {{ itemVenda.produtoNome }}</mat-list-item>
                 <mat-list-item> {{itemVenda.produtoPreco  | currency:'R$'}}</mat-list-item>
-                <input class='form-control' type='number' min = "1" name="cpf" [(ngModel)]="itemVenda.quantidade" (change)="toggleSelectionItemVenda(itemVenda)">
+                <input style="width:50px; height:25px;" class='form-control' type='number' min="1" name="cpf"
+                       [(ngModel)]="itemVenda.quantidade" (change)="toggleSelectionItemVenda(itemVenda)">
                 <mat-list-item>{{itemVenda.subTotal  | currency:'R$'}}</mat-list-item>
+                <button mat-raised-button (click)="deleteItemVenda(itemVenda)" color="primary">
+                    X
+                </button>
             </mat-list-item>
         </mat-list>
-            <input type="submit" class="btnSubmit" value="Cadastrar" />
+        <div class="example-button-container">
+            <button mat-flat-button color="warn">Salvar</button>
+        </div>
     </form>
 </mat-card>
 

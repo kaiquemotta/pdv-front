@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="realizando calculo subtotal">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +93,7 @@
       <workItem from="1621014660991" duration="6201000" />
       <workItem from="1621255012331" duration="31281000" />
       <workItem from="1621341225290" duration="3979000" />
-      <workItem from="1621425130097" duration="40405000" />
+      <workItem from="1621425130097" duration="47887000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -103,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621655338077</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="realizando calculo subtotal">
+      <created>1621655619367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621655619367</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

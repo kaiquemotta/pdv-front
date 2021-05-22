@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {first, map, startWith} from "rxjs/operators";
+import {map, startWith} from "rxjs/operators";
 import {FormControl} from "@angular/forms";
-import {VendaService} from "../venda.service";
 import {ProdutoService} from "../../produto/produto.service";
 import {ProdutoModel} from "../../produto/produto.model";
-import {VendaModel} from "../venda.model";
 import {ItemVenda} from "../ItemVenda";
+import {DialogComponent} from "../../dialog/dialog/dialog.component";
+import {MatDialog} from "@angular/material/dialog";
 
 
 @Component({
@@ -22,7 +22,8 @@ export class VendaUpdateComponent implements OnInit {
     options: ProdutoModel[] = new Array<ProdutoModel>();
     itemsVenda: ItemVenda [] = [];
     userControl = new FormControl();
-    public cpf: number;      // propriedade que liga o html ao ts e vice-versa
+    animal: string;
+    name: string;
 
     itemVenda: ItemVenda = {
         id: 0,
@@ -33,7 +34,7 @@ export class VendaUpdateComponent implements OnInit {
     }
 
 
-    constructor(private produtoService: ProdutoService) {
+    constructor(private produtoService: ProdutoService, public dialog: MatDialog) {
     }
 
     toggleSelection(produto: ProdutoModel) {
@@ -44,7 +45,6 @@ export class VendaUpdateComponent implements OnInit {
             this.itemVenda.quantidade = 1;
             this.itemVenda.subTotal = produto.preco * 1;
             this.itemsVenda.push({...this.itemVenda})
-            console.log(this.itemsVenda)
         } else {
             const i = this.itemsVenda.findIndex(value => value.produtoNome === produto.nome && value.produtoNome === produto.nome);
             this.itemsVenda.splice(i, 1);
@@ -72,9 +72,20 @@ export class VendaUpdateComponent implements OnInit {
         this.toggleSelection(user);
     }
 
+    removerItemVenda(itemVenda: ItemVenda) {
+        const i = this.itemsVenda.findIndex(value => value.produtoNome === itemVenda.produtoNome && value.produtoNome === itemVenda.produtoNome);
+        this.itemsVenda.splice(i, 1,)
+        const produto = this.options.findIndex(value => value.nome === itemVenda.produtoNome && value.nome === itemVenda.produtoNome);
+        this.options[produto].selected= false;
+    }
+
     toggleSelectionItemVenda(itemVenda: ItemVenda) {
-        console.log(itemVenda.quantidade);
-        itemVenda.subTotal = itemVenda.quantidade * itemVenda.produtoPreco;
+        if (itemVenda.quantidade > 0) {
+            itemVenda.subTotal = itemVenda.quantidade * itemVenda.produtoPreco;
+        } else {
+            itemVenda.quantidade = 1;
+            itemVenda.subTotal = itemVenda.quantidade * itemVenda.produtoPreco;
+        }
         this.userControl.setValue(this.itemsVenda);
     }
 
@@ -90,10 +101,20 @@ export class VendaUpdateComponent implements OnInit {
         return this.options;
     }
 
-    cadastrar() {
-        console.log(this.itemsVenda)  // valor inserido no input
-    }
+    deleteItemVenda(itemVenda: ItemVenda): void {
+        let dialogRef = this.dialog.open(DialogComponent, {
+            width: '250px',
+            data: {name: this.name, animal: this.animal}
+        });
 
+        dialogRef.afterClosed().subscribe(result => {
+
+            if (result == "SIM") {
+                console.log("remove")
+                this.removerItemVenda(itemVenda);
+            }
+        });
+    }
 
 }
 

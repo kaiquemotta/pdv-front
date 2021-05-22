@@ -45,6 +45,8 @@ import {VendaUpdateComponent} from './components/venda/venda-update/venda-update
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { DialogComponent } from './components/dialog/dialog/dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
     declarations: [
@@ -67,6 +69,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         VendaComponent,
         VendaReadComponent,
         VendaUpdateComponent,
+        DialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -90,6 +93,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         MatIconModule,
         MatAutocompleteModule,
         MatCheckboxModule,
+        MatDialogModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
