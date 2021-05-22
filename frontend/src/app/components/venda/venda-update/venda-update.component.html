@@ -24,7 +24,7 @@
             <mat-list-item *ngFor="let itemVenda of itemsVenda">
                 <mat-list-item> {{ itemVenda.produtoNome }}</mat-list-item>
                 <mat-list-item> {{itemVenda.produtoPreco  | currency:'R$'}}</mat-list-item>
-                <input class='form-control' type='number' name="cpf" [(ngModel)]="itemVenda.quantidade" (change)="toggleSelectionItemVenda(itemVenda)">
+                <input class='form-control' type='number' min = "1" name="cpf" [(ngModel)]="itemVenda.quantidade" (change)="toggleSelectionItemVenda(itemVenda)">
                 <mat-list-item>{{itemVenda.subTotal  | currency:'R$'}}</mat-list-item>
             </mat-list-item>
         </mat-list>
