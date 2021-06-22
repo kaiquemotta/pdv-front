@@ -4,9 +4,6 @@ import {MatSort} from "@angular/material/sort";
 import {MatTable, MatTableDataSource} from "@angular/material/table";
 import {VendaModel} from "../venda.model";
 import {VendaService} from "../venda.service";
-import {ProdutoModel} from "../../produto/produto.model";
-import {ProdutoService} from "../../produto/produto.service";
-import {VendaComponent} from "../../../views/venda/venda.component";
 
 @Component({
   selector: 'app-venda-read',
@@ -14,6 +11,7 @@ import {VendaComponent} from "../../../views/venda/venda.component";
   styleUrls: ['./venda-read.component.css']
 })
 export class VendaReadComponent implements OnInit {
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<VendaModel>;
@@ -24,7 +22,6 @@ export class VendaReadComponent implements OnInit {
   EXAMPLE_DATA: VendaModel[]
   dataSource = new MatTableDataSource<VendaModel>(this.EXAMPLE_DATA);
 
-  //data: ProdutoModel[] = EXAMPLE_DATA;
 
   constructor(private vendaService: VendaService) {
   }

@@ -18,8 +18,8 @@
             <td mat-cell *matCellDef="let venda">{{venda.subTotal | currency: 'BRL'}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="acoes" >
-            <th class = "colunaAcoes"mat-header-cell *matHeaderCellDef mat-sort-header>Ações</th>
+        <ng-container matColumnDef="acoes">
+            <th class="colunaAcoes" mat-header-cell *matHeaderCellDef mat-sort-header>Ações</th>
             <td mat-cell *matCellDef="let venda">
                 <a routerLink="/venda/update/{{venda.id}}" class="edit">
                     <mat-icon>add_shopping_cart</mat-icon>

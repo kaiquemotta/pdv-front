@@ -5,7 +5,7 @@
             <mat-label>Nome</mat-label>
             <input matInput placeholder="Ex: Claudio" name="nomeComanda" formControlName="nomeComanda">
             <mat-error
-                    *ngIf="venda.touched || venda.dirty && c.nome.errors?.required">Preencha o campo
+                    *ngIf="venda.touched || venda.dirty && c.nomeComanda.errors?.required">Preencha o campo
                 nome
             </mat-error>
         </mat-form-field>

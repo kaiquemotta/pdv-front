@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="realizando calculo subtotal">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/dialog/dialog/dialog.component.ts" afterDir="false" />
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="adicionando dialog confirmacao de remoção de item venda">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/itemVenda.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/guards/item-venda-resolver.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/ItemVenda.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/itemVenda.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-create/venda-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-read/venda-read.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
     </list>
@@ -54,17 +60,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -93,7 +88,15 @@
       <workItem from="1621014660991" duration="6201000" />
       <workItem from="1621255012331" duration="31281000" />
       <workItem from="1621341225290" duration="3979000" />
-      <workItem from="1621425130097" duration="47887000" />
+      <workItem from="1621425130097" duration="52607000" />
+      <workItem from="1622153295582" duration="12016000" />
+      <workItem from="1622411134313" duration="694000" />
+      <workItem from="1622765607492" duration="18701000" />
+      <workItem from="1623123916317" duration="7050000" />
+      <workItem from="1624231096869" duration="13335000" />
+      <workItem from="1624318512154" duration="1246000" />
+      <workItem from="1624326922645" duration="1204000" />
+      <workItem from="1624328317195" duration="7271000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -116,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621655619367</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adicionando dialog confirmacao de remoção de item venda">
+      <created>1621663100099</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621663100099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +148,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init item venda" />
     <MESSAGE value="realizando calculo subtotal" />
-    <option name="LAST_COMMIT_MESSAGE" value="realizando calculo subtotal" />
+    <MESSAGE value="adicionando dialog confirmacao de remoção de item venda" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando dialog confirmacao de remoção de item venda" />
   </component>
 </project>

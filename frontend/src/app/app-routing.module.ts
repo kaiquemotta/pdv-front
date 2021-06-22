@@ -13,6 +13,7 @@ import {ProdutoDeleteComponent} from "./components/produto/produto-delete/produt
 import {CategoriaUpdateComponent} from "./components/categoria/categoria-update/categoria-update.component";
 import {VendaCreateComponent} from "./components/venda/venda-create/venda-create.component";
 import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
+import {VendaReadComponent} from "./components/venda/venda-read/venda-read.component";
 
 const routes: Routes = [
     {
@@ -59,6 +60,11 @@ const routes: Routes = [
         component: VendaComponent
     },
     {
+        path: "venda/read",
+        component: VendaReadComponent
+    },
+
+    {
         path: "venda/create",
         component: VendaCreateComponent
     },
@@ -68,7 +74,7 @@ const routes: Routes = [
     },
     {
         path: "venda/delete/:id",
-        component: VendaCreateComponent
+        component: VendaCreateComponent, data: {some_data: 'some value'}
     },
 
 ];

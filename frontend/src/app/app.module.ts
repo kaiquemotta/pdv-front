@@ -41,12 +41,12 @@ import {CategoriaUpdateComponent} from './components/categoria/categoria-update/
 import {VendaCreateComponent} from './components/venda/venda-create/venda-create.component';
 import {VendaComponent} from './views/venda/venda.component';
 import {VendaReadComponent} from './components/venda/venda-read/venda-read.component';
-import {VendaUpdateComponent} from './components/venda/venda-update/venda-update.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { DialogComponent } from './components/dialog/dialog/dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
 
 @NgModule({
     declarations: [
