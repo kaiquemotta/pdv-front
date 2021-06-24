@@ -10,6 +10,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {VendaService} from "../venda.service";
 import {ItemVendaService} from "../itemVenda.service";
 import {ActivatedRoute} from "@angular/router";
+import {PagamentoComponent} from "../../pagamento/pagamento.component";
 
 
 @Component({
@@ -61,12 +62,13 @@ export class VendaUpdateComponent implements OnInit {
                 map(value => typeof value === 'string' ? value : value.nome),
                 map(nome => nome ? this._filter(nome) : this.options)
             );
-        this.options = this.findAllProdutos();
+        this.findAllProdutos();
         this.total = this.atualizaTotal();
-        this.ngOnDestroy();
     }
 
     toggleSelection(produto: ProdutoModel) {
+        let a: ItemVendaModel;
+
         produto.selected = !produto.selected;
         if (produto.selected) {
 
@@ -78,19 +80,26 @@ export class VendaUpdateComponent implements OnInit {
             this.itemVenda.idVenda = this.id;
             this.itensVenda.push({...this.itemVenda})
         } else {
-            const i = this.itensVenda.findIndex(value => value.produtoNome === produto.nome && value.produtoNome === produto.nome);
-            this.itensVenda.splice(i, 1);
+            a = this.achaItenVendaSelect(produto.nome);
+            this.deleteItemVenda(a);
         }
         this.atualizaTotal();
         this.userControl.setValue(this.itensVenda);
-        console.log(this.itensVenda)
+    }
 
+    achaItenVendaSelect(nome: string): ItemVendaModel {
+        for (let item of this.itensVenda) {
+            if (item.produtoNome === nome) {
+                return item;
+            }
+        }
     }
 
     displayFn(product: ProdutoModel): string {
         return product && product.nome ? product
             .nome : '';
     }
+
 
     optionClicked(event: Event, user: ProdutoModel) {
         event.stopPropagation();
@@ -133,6 +142,9 @@ export class VendaUpdateComponent implements OnInit {
     private findAllProdutos(): ProdutoModel[] {
         this.produtoService.findAll().subscribe(produtos => {
             produtos.map(prod => this.options.push(prod))
+
+            console.log(this.itensVenda)
+            console.log(this.options)
             for (let item of this.itensVenda) {
                 for (let produto of this.options) {
                     if (item.produtoNome === produto.nome) {
@@ -140,8 +152,8 @@ export class VendaUpdateComponent implements OnInit {
                     }
                 }
             }
-        })
 
+        })
         return this.options;
     }
 
@@ -151,18 +163,23 @@ export class VendaUpdateComponent implements OnInit {
             this.atualizaTotal();
         });
         return this.itensVenda;
-        console.log(this.itensVenda)
     }
 
     deleteItemVenda(itemVenda: ItemVendaModel): void {
+
         let dialogRef = this.dialog.open(DialogComponent, {
             width: '250px',
-            data: {name: this.name, animal: this.animal}
         });
 
         dialogRef.afterClosed().subscribe(result => {
             if (result == "SIM") {
-                this.removerItemVenda(itemVenda);
+                if (itemVenda.id != 0) {
+                    this.itemVendaService.delete(itemVenda.id, itemVenda.idVenda).subscribe(() => {
+                        this.removerItemVenda(itemVenda);
+                    })
+                } else {
+                    this.removerItemVenda(itemVenda);
+                }
             }
         });
     }
@@ -172,10 +189,33 @@ export class VendaUpdateComponent implements OnInit {
     }
 
     salvarItensVenda() {
-        console.log(this.itensVenda)
-        this.itemVendaService.insertItensVenda(this.itensVenda).subscribe(() => {
+        this.itemVendaService.insertItensVenda(this.itensVenda).subscribe(itens => {
+            this.itensVenda = null;
+            this.itensVenda = itens;
             this.produtoService.mostrarMessagem('Comanda atualizada!', false);
         })
+    }
+
+
+    load() {
+        console.log('sessionStorage', sessionStorage);
+        (sessionStorage.refresh == 'true' || !sessionStorage.refresh)
+        && location.reload();
+        sessionStorage.refresh = false;
+    }
+
+
+    realizarPagamento() {
+
+        let dialogRef = this.dialog.open(PagamentoComponent, {
+            width: '400px',
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            if (result == "SIM") {
+
+            }
+        });
     }
 }
 

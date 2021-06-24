@@ -47,6 +47,11 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import { DialogComponent } from './components/dialog/dialog/dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
+import { PagamentoComponent } from './components/pagamento/pagamento.component';
+import { ModoPagamentoComponent } from './views/modo-pagamento/modo-pagamento.component';
+import { ModoPagamentoReadComponent } from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
+import { ModoPagamentoUpdateComponent } from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
+import { ModoPagagamentoCreateComponent } from './components/modo-pagamento/modo-pagagamento-create/modo-pagagamento-create.component';
 
 @NgModule({
     declarations: [
@@ -70,6 +75,11 @@ import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update
         VendaReadComponent,
         VendaUpdateComponent,
         DialogComponent,
+        PagamentoComponent,
+        ModoPagamentoComponent,
+        ModoPagamentoReadComponent,
+        ModoPagamentoUpdateComponent,
+        ModoPagagamentoCreateComponent,
     ],
     imports: [
         BrowserModule,

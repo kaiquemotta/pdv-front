@@ -1,0 +1,39 @@
+<div mat-dialog-content>
+    <mat-card class="demo-dialog-card">
+        <mat-card-content>
+            <h2>Pagamento</h2>
+            <p>
+                <mat-label style="font-size: 20px">Total Venda :</mat-label>
+                <span>R$ 20,00</span>
+            </p>
+
+            <p>
+                <mat-form-field>
+                    <mat-select placeholder="Button alignment" [(ngModel)]="actionsAlignment">
+                        <mat-option>Start</mat-option>
+                        <mat-option value="end">End</mat-option>
+                        <mat-option value="center">Center</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-label>Total Venda :</mat-label>
+                <span>R$ 20,00</span>
+            </p>
+
+            <p>
+                <mat-label>Total Venda :</mat-label>
+                <span>R$ 20,00</span>
+            </p>
+
+            <p>
+                <mat-label>Total Venda :</mat-label>
+                <span>R$ 20,00</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Não</button>
+    <button mat-button [mat-dialog-close]="'SIM'" cdkFocusInitial>Sim</button>
+</div>

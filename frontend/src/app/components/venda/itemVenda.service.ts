@@ -44,6 +44,8 @@ export class ItemVendaService {
 
     ItemVendaModel(id: number): Observable<ItemVendaModel> {
         const url = `${this.baseUrl}/${id}`
+        console.log("venda")
+        console.log(url)
         return this.http.get<ItemVendaModel>(url).pipe(
             map(obj => this.ItemVendaModel),
             catchError(e => this.errorHandler(e))
@@ -58,8 +60,10 @@ export class ItemVendaService {
         )
     }
 
-    delete(id: string): Observable<VendaModel> {
-        const url = `${this.baseUrl}/${'id'}`
+    delete(itemVendaId: number,vendaId: number): Observable<VendaModel> {
+        const url = `${this.baseUrl}/${itemVendaId}/venda/${vendaId}`
+        console.log("venda")
+        console.log(url)
         return this.http.delete<VendaModel>(url).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))

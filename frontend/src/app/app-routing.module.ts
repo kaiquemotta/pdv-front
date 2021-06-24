@@ -14,6 +14,7 @@ import {CategoriaUpdateComponent} from "./components/categoria/categoria-update/
 import {VendaCreateComponent} from "./components/venda/venda-create/venda-create.component";
 import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
 import {VendaReadComponent} from "./components/venda/venda-read/venda-read.component";
+import {ModoPagamentoComponent} from "./views/modo-pagamento/modo-pagamento.component";
 
 const routes: Routes = [
     {
@@ -75,6 +76,10 @@ const routes: Routes = [
     {
         path: "venda/delete/:id",
         component: VendaCreateComponent, data: {some_data: 'some value'}
+    },
+    {
+        path: "modosPagamentos",
+        component: ModoPagamentoComponent
     },
 
 ];
