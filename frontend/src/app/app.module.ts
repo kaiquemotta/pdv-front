@@ -51,7 +51,7 @@ import { PagamentoComponent } from './components/pagamento/pagamento.component';
 import { ModoPagamentoComponent } from './views/modo-pagamento/modo-pagamento.component';
 import { ModoPagamentoReadComponent } from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
 import { ModoPagamentoUpdateComponent } from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
-import { ModoPagagamentoCreateComponent } from './components/modo-pagamento/modo-pagagamento-create/modo-pagagamento-create.component';
+import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
 
 @NgModule({
     declarations: [
@@ -79,7 +79,7 @@ import { ModoPagagamentoCreateComponent } from './components/modo-pagamento/modo
         ModoPagamentoComponent,
         ModoPagamentoReadComponent,
         ModoPagamentoUpdateComponent,
-        ModoPagagamentoCreateComponent,
+        ModoPagamentoCreateComponent,
     ],
     imports: [
         BrowserModule,

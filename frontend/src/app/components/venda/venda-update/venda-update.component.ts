@@ -32,7 +32,6 @@ export class VendaUpdateComponent implements OnInit {
 
 
     userControl = new FormControl();
-    animal: string;
     name: string;
 
 
@@ -197,18 +196,12 @@ export class VendaUpdateComponent implements OnInit {
     }
 
 
-    load() {
-        console.log('sessionStorage', sessionStorage);
-        (sessionStorage.refresh == 'true' || !sessionStorage.refresh)
-        && location.reload();
-        sessionStorage.refresh = false;
-    }
-
-
     realizarPagamento() {
 
         let dialogRef = this.dialog.open(PagamentoComponent, {
-            width: '400px',
+            width: '550px',
+            height: '650px',
+            data: {id: this.id}
         });
 
         dialogRef.afterClosed().subscribe(result => {

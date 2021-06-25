@@ -6,4 +6,5 @@ export interface VendaModel {
     valorTotal: string
     dataCriacaoVenda: string
     dataFechamentoVenda: string
+    porcentagemDesconto:number
 }

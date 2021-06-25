@@ -12,7 +12,7 @@ export class ModoPagamentoComponent implements OnInit {
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       titulo: 'Cadastro de Modos de pagamentos',
-      icone: 'storefront',
+      icone: 'payment',
       routeUrl: '/ModosPagamentos'
     }
   }
@@ -21,7 +21,7 @@ export class ModoPagamentoComponent implements OnInit {
   }
 
   navegarParaModoPagamentoCreate(): void{
-    this.router.navigate(['/modosPagamentos'])
+    this.router.navigate(['/modosPagamentos/create'])
   }
 
 }

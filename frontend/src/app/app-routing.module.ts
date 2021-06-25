@@ -15,6 +15,8 @@ import {VendaCreateComponent} from "./components/venda/venda-create/venda-create
 import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
 import {VendaReadComponent} from "./components/venda/venda-read/venda-read.component";
 import {ModoPagamentoComponent} from "./views/modo-pagamento/modo-pagamento.component";
+import {ModoPagamentoCreateComponent} from "./components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component";
+import {ModoPagamentoUpdateComponent} from "./components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component";
 
 const routes: Routes = [
     {
@@ -80,6 +82,15 @@ const routes: Routes = [
     {
         path: "modosPagamentos",
         component: ModoPagamentoComponent
+    },
+    {
+        path: "modosPagamentos/create",
+        component: ModoPagamentoCreateComponent
+    },
+
+    {
+        path: "modoPagamento/update/:id",
+        component: ModoPagamentoUpdateComponent
     },
 
 ];

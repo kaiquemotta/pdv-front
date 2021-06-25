@@ -4,14 +4,15 @@ import {HttpClient} from "@angular/common/http";
 import {CategoriaModel} from "../categoria/categoria.model";
 import {EMPTY, Observable} from "rxjs";
 import {catchError, map} from "rxjs/operators";
-import {ModoPagamentoModel} from "./modo-pagamento.model";
+import {PagamentoModel} from "./pagamento.model";
+import {ModoPagamentoModel} from "../modo-pagamento/modo-pagamento.model";
 
 @Injectable({
     providedIn: 'root'
 })
-export class ModoPagamentoService {
+export class PagamentoService {
 
-    baseUrl = "http://localhost:8080/modoPagamento"
+    baseUrl = "http://localhost:8080/pagamento"
 
     constructor(private snackBar: MatSnackBar,
                 private http: HttpClient) {
@@ -26,40 +27,40 @@ export class ModoPagamentoService {
         }))
     }
 
-    insert(modoPagamentoModel: ModoPagamentoModel): Observable<CategoriaModel> {
-        return this.http.post<CategoriaModel>(this.baseUrl, modoPagamentoModel).pipe(
+    insert(pagamento: PagamentoModel): Observable<CategoriaModel> {
+        return this.http.post<CategoriaModel>(this.baseUrl, pagamento).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
     }
 
-    findAll(): Observable<ModoPagamentoModel[]> {
-        return this.http.get<ModoPagamentoModel[]>(this.baseUrl).pipe(
+    findAll(): Observable<PagamentoModel[]> {
+        return this.http.get<PagamentoModel[]>(this.baseUrl).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
     }
 
-    findById(id: string): Observable<ModoPagamentoModel>{
-        const url =`${this.baseUrl}/${id}`
-        return this.http.get<ModoPagamentoModel>(url).pipe(
+    findById(id: string): Observable<PagamentoModel> {
+        const url = `${this.baseUrl}/${id}`
+        return this.http.get<PagamentoModel>(url).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
     }
 
-    update(modoPagamento: ModoPagamentoModel): Observable<ModoPagamentoModel> {
-        const url = `${this.baseUrl}/${modoPagamento.id}`
-        console.log(modoPagamento)
-        return this.http.put<ModoPagamentoModel>(url, modoPagamento).pipe(
+    update(pagamento: PagamentoModel): Observable<PagamentoModel> {
+        const url = `${this.baseUrl}/${pagamento.id}`
+        console.log(pagamento)
+        return this.http.put<PagamentoModel>(url, pagamento).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
     }
 
-    delete(id: string): Observable<ModoPagamentoModel> {
+    delete(id: string): Observable<PagamentoModel> {
         const url = `${this.baseUrl}/${'id'}`
-        return this.http.delete<ModoPagamentoModel>(url).pipe(
+        return this.http.delete<PagamentoModel>(url).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
