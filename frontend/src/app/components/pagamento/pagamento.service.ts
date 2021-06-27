@@ -27,8 +27,8 @@ export class PagamentoService {
         }))
     }
 
-    insert(pagamento: PagamentoModel): Observable<CategoriaModel> {
-        return this.http.post<CategoriaModel>(this.baseUrl, pagamento).pipe(
+    insert(pagamento: PagamentoModel): Observable<PagamentoModel> {
+        return this.http.post<PagamentoModel>(this.baseUrl, pagamento).pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
@@ -69,5 +69,13 @@ export class PagamentoService {
     errorHandler(e: any): Observable<any> {
         this.mostrarMessagem('Ocorreu um erro!', true)
         return EMPTY
+    }
+
+    findByVendaId(vendaId) {
+        const url = `${this.baseUrl}/vendaId/${vendaId}`
+        return this.http.get<PagamentoModel>(url).pipe(
+            map(obj => obj),
+            catchError(e => this.errorHandler(e))
+        )
     }
 }
