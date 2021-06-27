@@ -80,7 +80,7 @@ export class PagamentoComponent implements OnInit {
     ngOnInit(): void {
         this.pagamento = this.fb.group({
             id: [{ value: '', disabled: false }],
-            modoPagamento: [{ value: '', disabled: false }],
+            modoPagamento: [{ value: '', disabled: false ,}],
             total: [{ value: '', disabled: true }],
             restante: [{ value: '0.00', disabled: true }],
             subTotal: [{ value: '', disabled: true }],

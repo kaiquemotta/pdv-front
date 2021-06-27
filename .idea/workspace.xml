@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="init pagamentos 2">
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="init pagamentos 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/views/venda/venda.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/views/venda/venda.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1624628416509" duration="6228000" />
       <workItem from="1624669176024" duration="6864000" />
       <workItem from="1624799005311" duration="1115000" />
-      <workItem from="1624800162753" duration="6912000" />
+      <workItem from="1624800162753" duration="7494000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624591949922</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init pagamentos 3">
+      <created>1624815714787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624815714788</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +186,8 @@
     <MESSAGE value="init modo de pagamento" />
     <MESSAGE value="init pagamentos" />
     <MESSAGE value="init pagamentos 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="init pagamentos 2" />
+    <MESSAGE value="init pagamentos 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="init pagamentos 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -20,7 +20,7 @@ export class PagamentoService {
 
     mostrarMessagem(msg: string, isError: boolean = false): void {
         console.log(this.snackBar.open(msg, 'X', {
-            duration: 3000,
+            duration: 4000,
             horizontalPosition: "right",
             verticalPosition: "top",
             panelClass: isError ? ['msg-error'] : ['msg-sucess']

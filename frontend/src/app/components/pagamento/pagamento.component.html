@@ -82,7 +82,14 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+<div class="example-button-container"  style="display: flex; justify-content: flex-end">
+    <button mat-icon-button color="accent" (click)="onNoClick()">
+        <mat-icon>check_circle</mat-icon>
+    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-icon-button color="accent" (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+    </button>&nbsp;&nbsp;
+</div>
 
 
 
