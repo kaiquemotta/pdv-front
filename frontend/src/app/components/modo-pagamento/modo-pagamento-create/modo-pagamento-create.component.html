@@ -30,9 +30,8 @@
                 Taxa desconto
             </mat-error>
         </mat-form-field>
-
         <mat-checkbox class="example-margin" formControlName="troco">Troco</mat-checkbox>
-
+        <mat-checkbox class="example-margin" formControlName="aVista">A vista</mat-checkbox>
     </form>
 
     <button mat-raised-button [disabled]="!modoPagamento.valid" (click)="criarCategoria()" color="primary">

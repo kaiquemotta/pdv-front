@@ -3,7 +3,7 @@
     <form [formGroup]="produto">
         <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
-            <input matInput placeholder="Ex: Coca-Cola" name="nome" formControlName="nome">
+            <input matInput placeholder="Ex: Coca-Cola" type="text"  name="nome" formControlName="nome">
             <mat-error *ngIf="produto.touched || produto.dirty && p.nome.errors?.required">Preencha o
                 campo
                 nome
@@ -12,6 +12,7 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Preço</mat-label>
+            <input type='text' suffix=" $" mask="0000" >
             <input matInput placeholder="Ex: 10" name="preco" formControlName="preco"
                    type="number" min="0">
             <mat-error>Preencha o campo preço</mat-error>

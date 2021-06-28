@@ -52,6 +52,7 @@ import { ModoPagamentoComponent } from './views/modo-pagamento/modo-pagamento.co
 import { ModoPagamentoReadComponent } from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
 import { ModoPagamentoUpdateComponent } from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
 import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
     declarations: [
@@ -80,6 +81,7 @@ import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-p
         ModoPagamentoReadComponent,
         ModoPagamentoUpdateComponent,
         ModoPagamentoCreateComponent,
+
     ],
     imports: [
         BrowserModule,
@@ -104,6 +106,10 @@ import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-p
         MatAutocompleteModule,
         MatCheckboxModule,
         MatDialogModule,
+        NgxMaskModule.forRoot({
+            validation: true,
+
+        }),
     ],
     providers: [],
     bootstrap: [AppComponent]

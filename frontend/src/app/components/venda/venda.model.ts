@@ -3,7 +3,7 @@ export interface VendaModel {
     nomeComanda: string
     finalizada: boolean
     subTotal: string
-    valorTotal: string
+    valorTotal: number
     dataCriacaoVenda: string
     dataFechamentoVenda: string
     porcentagemDesconto:number

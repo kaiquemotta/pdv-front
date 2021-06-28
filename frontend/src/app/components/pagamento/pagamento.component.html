@@ -7,31 +7,32 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Modo de pagamento</mat-label>
                     <mat-select placeholder="Modos Pagmentos"formControlName="modoPagamento">
-                        <mat-option *ngFor="let modoPagamento of modosPagamentos" [value]="modoPagamento">
+                        <mat-option *ngFor="let modoPagamento of modosPagamentos" [value]="modoPagamento"  (click)="selectModoPgto(modoPagamento)">
                             {{modoPagamento.descricao}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Preencha o campo modo de pagamento
                     </mat-error>
                 </mat-form-field>
-
                 <mat-form-field appearance="outline" style="padding-left: 20px">
-                    <mat-label>Total</mat-label>
-                    <input matInput placeholder="Width" value="{{venda.valorTotal | currency:'R$'}}"formControlName="total">
+                    <mat-label>SubTotal</mat-label>
+
+                    <input matInput placeholder="R$ 10.00"
+                           value="{{venda.subTotal | currency:'R$'}}" formControlName="subTotal">
                 </mat-form-field>
+
 
             </div>
             <div style="display:flex ;flex-direction: row">
                 <mat-form-field appearance="outline">
                     <mat-label>Desconto %</mat-label>
-                    <input matInput placeholder="Width" value="% 0.02" name="porcentagemDesconto" formControlName="porcentagemDesconto">
-                </mat-form-field>
-                <mat-form-field appearance="outline" style="padding-left: 20px">
-                    <mat-label>SubTotal</mat-label>
-                    <input matInput placeholder="R$ 10.00"
-                           value="{{venda.subTotal | currency:'R$'}}" formControlName="subTotal">
+                    <input matInput placeholder="Width" value="% 0.02" name="porcentagemDesconto" formControlName="porcentagemDesconto" (keydown.Tab)= recalculaTotal()>
                 </mat-form-field>
 
+                <mat-form-field appearance="outline" style="padding-left: 20px">
+                    <mat-label>Total</mat-label>
+                    <input matInput placeholder="Width" value="{{venda.valorTotal | currency:'R$'}}"formControlName="total">
+                </mat-form-field>
             </div>
             <div style="display:flex ;flex-direction: row">
                 <mat-form-field appearance="outline">

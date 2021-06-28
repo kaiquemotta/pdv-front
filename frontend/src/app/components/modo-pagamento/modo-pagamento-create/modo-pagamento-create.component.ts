@@ -23,7 +23,8 @@ export class ModoPagamentoCreateComponent implements OnInit {
       descricao: ['', Validators.required],
       taxa: ['', Validators.required],
       porcentagemDesconto:['',Validators.required],
-      troco:[false,Validators.required]
+      troco:[false,Validators.required],
+      aVista:[false,Validators.required]
 
     })
   }

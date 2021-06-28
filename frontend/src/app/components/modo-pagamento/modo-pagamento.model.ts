@@ -4,6 +4,5 @@ export interface ModoPagamentoModel {
     taxa : number
     porcentagemDesconto:number
     troco?:boolean
-
-
+    aVista?:boolean
 }

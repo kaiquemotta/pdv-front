@@ -36,22 +36,20 @@ const ELEMENT_DATA: PagamentoModel[] = [
 export class PagamentoComponent implements OnInit {
 
 
-    displayedColumns: string[] = [ 'modoPagamento', 'quantidadeParcela', 'valorPagamento'];
+    displayedColumns: string[] = ['modoPagamento', 'quantidadeParcela', 'valorPagamento'];
     dataSource: MatTableDataSource<PagamentoModel>;
     modosPagamentos: any
     pagamento: FormGroup;
-
     pagamentos: PagamentoModel [] = [];
-    pagamento1: PagamentoModel;
-    myControl = new FormControl();
-
+    modoPagamento: any;
+    public format = "### \'%\'"
 
     venda: VendaModel = {
         id: 0,
         nomeComanda: '',
         finalizada: false,
         subTotal: '',
-        valorTotal: '',
+        valorTotal: 0,
         dataCriacaoVenda: '',
         dataFechamentoVenda: '',
         porcentagemDesconto: 0
@@ -79,16 +77,16 @@ export class PagamentoComponent implements OnInit {
 
     ngOnInit(): void {
         this.pagamento = this.fb.group({
-            id: [{ value: '', disabled: false }],
-            modoPagamento: [{ value: '', disabled: false ,}],
-            total: [{ value: '', disabled: true }],
-            restante: [{ value: '0.00', disabled: true }],
-            subTotal: [{ value: '', disabled: true }],
-            porcentagemDesconto: [{ value: '', disabled: false }],
-            valorPagamento: [{ value: '', disabled: false }],
-            idVenda: [{ value: this.data.id , disabled: false }],
-            quantidadeParcela: [{ value: '', disabled: false }],
-            troco: [{ value: '', disabled: true }],
+            id: [{value: '', disabled: true}],
+            modoPagamento: [{value: '', disabled: false,}],
+            total: [{value:  this.venda.valorTotal, disabled: true}],
+            restante: [{value: '0.00', disabled: true}],
+            subTotal: [{value: this.venda.subTotal, disabled: true}],
+            porcentagemDesconto: [{value: '', disabled: true}],
+            valorPagamento: [{value: '', disabled: true}],
+            idVenda: [{value: this.data.id, disabled: true}],
+            quantidadeParcela: [{value: '', disabled: true}],
+            troco: [{value: '', disabled: true}],
 
         })
         this.findAllPagamentos();
@@ -126,8 +124,46 @@ export class PagamentoComponent implements OnInit {
 
     private findAllPagamentos() {
         this.pagamentoService.findByVendaId(this.data.id).subscribe(pagamentos => {
-            this.pagamentos= pagamentos
+            this.pagamentos = pagamentos
             this.dataSource = new MatTableDataSource(this.pagamentos);
         })
+    }
+
+    selectModoPgto(modoPagamento: any) {
+        this.modoPagamento = modoPagamento;
+
+        console.log("entroua");
+
+        if (modoPagamento.aVista === true) {
+            console.log("entrou");
+            this.pagamento.controls.porcentagemDesconto.enable();
+            this.pagamento.controls.valorPagamento.enable();
+            this.pagamento.controls.quantidadeParcela.setValue('1');
+
+        } else {
+
+            this.pagamento.controls.valorPagamento.enable();
+            this.pagamento.controls.quantidadeParcela.setValue('1');
+            this.pagamento.controls.quantidadeParcela.enable();
+
+
+        }
+        console.log(modoPagamento)
+    }
+
+    recalculaTotal() {
+        var desc = this.pagamento.controls.porcentagemDesconto.value;
+        var sub =  this.venda.valorTotal;
+
+        if (desc > 0 && desc <= this.modoPagamento.porcentagemDesconto) {
+            console.log((desc * sub) - sub);
+            console.log(this.venda.valorTotal);
+            this.pagamento.controls.total.setValue( (desc * sub) - sub);
+            console.log("desc ")
+        } else {
+            this.modoPagamentoService.mostrarMessagem("Porcentagem não permitida", true)
+            this.pagamento.controls.porcentagemDesconto.setValue(0);
+        }
+
     }
 }

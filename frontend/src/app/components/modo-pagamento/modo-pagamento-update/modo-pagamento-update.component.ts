@@ -16,7 +16,8 @@ export class ModoPagamentoUpdateComponent implements OnInit {
         descricao: '',
         taxa: 0,
         porcentagemDesconto: 0,
-        troco:false
+        troco:false,
+        aVista: false,
     }
 
     constructor(private modoPagamentoService: ModoPagamentoService,
@@ -25,14 +26,11 @@ export class ModoPagamentoUpdateComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log("CHEGOU AQ")
         //pega o id selecionado na lista e preenche os inputs
         const id = this.route.snapshot.paramMap.get('id')
         this.modoPagamentoService.findById(id).subscribe(modoPagamento => {
             this.modoPagamento = modoPagamento
         })
-
-
     }
 
     updateModoPagamento(): void {
