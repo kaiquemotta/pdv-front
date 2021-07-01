@@ -12,10 +12,8 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Preço</mat-label>
-            <input type='text' suffix=" $" mask="0000" >
-            <input matInput placeholder="Ex: 10" name="preco" formControlName="preco"
-                   type="number" min="0">
-            <mat-error>Preencha o campo preço</mat-error>
+            <input matInput  prefix="R$ " mask="separator.2" thousandSeparator="." placeholder="Ex: 10" name="preco" formControlName="preco"
+                   type="text" min="0">
         </mat-form-field>
 
 

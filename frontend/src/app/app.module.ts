@@ -52,8 +52,11 @@ import { ModoPagamentoComponent } from './views/modo-pagamento/modo-pagamento.co
 import { ModoPagamentoReadComponent } from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
 import { ModoPagamentoUpdateComponent } from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
 import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
-import { NgxMaskModule } from 'ngx-mask';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+const maskConfig: Partial<IConfig> = {
+    validation: false,
+};
 @NgModule({
     declarations: [
         AppComponent,
@@ -106,13 +109,11 @@ import { NgxMaskModule } from 'ngx-mask';
         MatAutocompleteModule,
         MatCheckboxModule,
         MatDialogModule,
-        NgxMaskModule.forRoot({
-            validation: true,
-
-        }),
+        NgxMaskModule.forRoot(maskConfig),
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

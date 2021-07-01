@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="init pagamentos 3">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/utils/TestMaskComponent.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/categoria/categoria-create/categoria-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/categoria/categoria-create/categoria-create.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-create/produto-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/produto/produto-create/produto-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,17 +57,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -122,7 +103,8 @@
       <workItem from="1624800162753" duration="7599000" />
       <workItem from="1624829567355" duration="8069000" />
       <workItem from="1624885141190" duration="314000" />
-      <workItem from="1624885484581" duration="1004000" />
+      <workItem from="1624885484581" duration="5737000" />
+      <workItem from="1625158752838" duration="4060000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -194,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624816211299</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="init pagamentos 3">
+      <created>1624886634303</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624886634303</updated>
+    </task>
+    <task id="LOCAL-00012" summary="init pagamentos 3">
+      <created>1624886694789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624886694789</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

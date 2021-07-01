@@ -14,7 +14,7 @@
         <mat-form-field appearance="outline">
 
             <mat-label>Taxa</mat-label>
-            <input matInput placeholder="Ex: 0.02" name="taxa" formControlName="taxa">
+            <input matInput placeholder="Ex: 0.02" name="taxa" formControlName="taxa" mask="percent" suffix="%" />
             <mat-error
                     *ngIf="modoPagamento.touched || modoPagamento.dirty && c.taxa.errors?.required">Preencha o campo
                 Taxa
