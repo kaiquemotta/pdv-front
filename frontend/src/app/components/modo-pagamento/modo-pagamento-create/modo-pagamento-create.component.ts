@@ -21,9 +21,9 @@ export class ModoPagamentoCreateComponent implements OnInit {
 
     this.modoPagamento = this.fb.group({
       descricao: ['', Validators.required],
-      taxa: ['', Validators.required],
-      porcentagemDesconto:['',Validators.required],
-      troco:[false,Validators.required],
+      // taxa: ['', [Validators.required, Validators.min(0.1)]],
+      porcentagemDesconto:['', [Validators.required, Validators.min(0.1)]],
+      // troco:[false,Validators.required],
       aVista:[false,Validators.required]
 
     })
@@ -33,11 +33,12 @@ export class ModoPagamentoCreateComponent implements OnInit {
     return this.modoPagamento.controls
   }
 
-  criarCategoria(): void {
+  criarModoPgto(): void {
 
     if (this.modoPagamento.invalid) {
       return;
     }
+    console.log(this.modoPagamento.value)
 
     //subscribe depois que ele recebe o retorno do back-end ele chama essa arrow function
     this.modoPagamentoService.insert(this.modoPagamento.value).subscribe(() => {

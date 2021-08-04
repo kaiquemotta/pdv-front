@@ -7,26 +7,7 @@ import {VendaService} from "../venda/venda.service";
 import {PagamentoModel} from "./pagamento.model";
 import {PagamentoService} from "./pagamento.service";
 import {MatTableDataSource} from "@angular/material/table";
-import {ProdutoModel} from "../produto/produto.model";
-import {ItemVendaModel} from "../venda/itemVenda.model";
-import {ModoPagamentoModel} from "../modo-pagamento/modo-pagamento.model";
 
-const defaultDialogConfig = new MatDialogConfig();
-
-// export interface PeriodicElement {
-//     name: string;
-//     position: number;
-//     weight: number;
-//     symbol: string;
-// }
-
-const ELEMENT_DATA: PagamentoModel[] = [
-    // {position: 1, name: 'Dinheiro', weight: 1, symbol: 'R$ 2.00'},
-    // {position: 2, name: 'Dinheiro', weight: 1, symbol: 'R$ 2.00'},
-    // {position: 3, name: 'Dinheiro', weight: 1, symbol: 'R$ 2.00'},
-    // {position: 4, name: 'Dinheiro', weight: 1, symbol: 'R$ 2.00'},
-    // {position: 5, name: 'Dinheiro', weight: 1, symbol: 'R$ 2.00'},
-];
 
 @Component({
     selector: 'app-pagamento',
@@ -42,7 +23,9 @@ export class PagamentoComponent implements OnInit {
     pagamento: FormGroup;
     pagamentos: PagamentoModel [] = [];
     modoPagamento: any;
-    public format = "### \'%\'"
+    restante: number;
+    troco : number;
+
 
     venda: VendaModel = {
         id: 0,
@@ -79,20 +62,21 @@ export class PagamentoComponent implements OnInit {
         this.pagamento = this.fb.group({
             id: [{value: '', disabled: true}],
             modoPagamento: [{value: '', disabled: false,}],
-            total: [{value:  this.venda.valorTotal, disabled: true}],
-            restante: [{value: '0.00', disabled: true}],
+            total: [{value: this.venda.valorTotal, disabled: true}],
+            restante: [{value: 0.00, disabled: true}],
             subTotal: [{value: this.venda.subTotal, disabled: true}],
             porcentagemDesconto: [{value: '', disabled: true}],
             valorPagamento: [{value: '', disabled: true}],
-            idVenda: [{value: this.data.id, disabled: true}],
+            idVenda: [{value: this.data.id, disabled: false}],
             quantidadeParcela: [{value: '', disabled: true}],
             troco: [{value: '', disabled: true}],
 
         })
+
+        this.vendaFindById();
         this.findAllPagamentos();
         this.findAllModosPagamentos()
-        this.vendaFindById();
-
+        console.log(this.restante)
 
     }
 
@@ -107,17 +91,34 @@ export class PagamentoComponent implements OnInit {
     }
 
     private vendaFindById() {
-        console.log(this.data.id)
         this.vendaService.findById(this.data.id).subscribe(venda => {
             this.venda = venda;
         })
     }
 
     addPagamento() {
+        if (this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
+            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
+                this.pagamentoModel = pagamento
+                this.pagamentos.push({...this.pagamentoModel})
+                this.dataSource = new MatTableDataSource(this.pagamentos);
+                this.somaTroco();
+                this.restante = 0.00;
+            })
+        } else {
+            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
+                this.pagamentoModel = pagamento
+                this.pagamentos.push({...this.pagamentoModel})
+                this.dataSource = new MatTableDataSource(this.pagamentos);
+                this.somaRestante();
+            })
+        }
+
         this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
             this.pagamentoModel = pagamento
             this.pagamentos.push({...this.pagamentoModel})
             this.dataSource = new MatTableDataSource(this.pagamentos);
+            this.somaRestante();
         })
     }
 
@@ -126,44 +127,64 @@ export class PagamentoComponent implements OnInit {
         this.pagamentoService.findByVendaId(this.data.id).subscribe(pagamentos => {
             this.pagamentos = pagamentos
             this.dataSource = new MatTableDataSource(this.pagamentos);
+            this.somaRestante();
+
         })
     }
 
     selectModoPgto(modoPagamento: any) {
         this.modoPagamento = modoPagamento;
 
-        console.log("entroua");
-
-        if (modoPagamento.aVista === true) {
-            console.log("entrou");
+        if (this.pagamentos.length > 0) {
+            this.pagamento.controls.porcentagemDesconto.disable();
+        }
+        if (modoPagamento.porcentagemDesconto > 0 && this.pagamentos.length === 0) {
             this.pagamento.controls.porcentagemDesconto.enable();
             this.pagamento.controls.valorPagamento.enable();
-            this.pagamento.controls.quantidadeParcela.setValue('1');
-
-        } else {
-
-            this.pagamento.controls.valorPagamento.enable();
-            this.pagamento.controls.quantidadeParcela.setValue('1');
             this.pagamento.controls.quantidadeParcela.enable();
-
-
+            this.pagamento.controls.quantidadeParcela.setValue('1');
+        } else {
+            this.pagamento.controls.valorPagamento.enable();
+            this.pagamento.controls.quantidadeParcela.enable();
+            this.pagamento.controls.quantidadeParcela.setValue('1');
         }
-        console.log(modoPagamento)
     }
 
     recalculaTotal() {
-        var desc = this.pagamento.controls.porcentagemDesconto.value;
-        var sub =  this.venda.valorTotal;
-
-        if (desc > 0 && desc <= this.modoPagamento.porcentagemDesconto) {
-            console.log((desc * sub) - sub);
-            console.log(this.venda.valorTotal);
-            this.pagamento.controls.total.setValue( (desc * sub) - sub);
-            console.log("desc ")
+        var porcentagem = this.pagamento.controls.porcentagemDesconto.value / 100;
+        var sub = this.venda.valorTotal;
+        var valorDesconto = porcentagem * sub;
+        if (valorDesconto >= 0 && porcentagem <= this.modoPagamento.porcentagemDesconto / 100) {
+            this.pagamento.controls.total.setValue(this.venda.valorTotal - valorDesconto);
         } else {
             this.modoPagamentoService.mostrarMessagem("Porcentagem não permitida", true)
             this.pagamento.controls.porcentagemDesconto.setValue(0);
         }
 
+    }
+
+    private somaRestante() {
+        var soma = 0;
+        for (let pagamento of this.pagamentos) {
+            soma += pagamento.valorPagamento;
+        }
+        this.restante = this.venda.valorTotal - soma;
+
+    }
+
+    private somaTroco() {
+        this.pagamento.controls.troco.setValue(this.pagamento.controls.valorPagamento.value - this.restante);
+        this.troco =  this.pagamento.controls.valorPagamento.value - this.restante;
+    }
+
+    verificaTroco() {
+        if (this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
+            this.pagamento.controls.troco.setValue(this.pagamento.controls.valorPagamento.value - this.restante);
+        } else if (!this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
+            this.modoPagamentoService.mostrarMessagem("Valor de pagamento maior que o restante", true)
+            this.pagamento.controls.valorPagamento.setValue(0.00)
+        }
+        console.log("troco")
+        console.log(this.troco)
     }
 }

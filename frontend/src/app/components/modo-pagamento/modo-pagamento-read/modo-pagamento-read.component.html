@@ -13,30 +13,30 @@
         </ng-container>
 
         <!-- Taxa Column -->
-        <ng-container matColumnDef="taxa">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Taxa %</th>
-            <td mat-cell *matCellDef="let modoPagamento">{{modoPagamento.taxa|number:'2.2-5'}}</td>
-        </ng-container>
+<!--        <ng-container matColumnDef="taxa">-->
+<!--            <th mat-header-cell *matHeaderCellDef mat-sort-header>Taxa %</th>-->
+<!--            <td mat-cell *matCellDef="let modoPagamento">{{modoPagamento.taxa}}</td>-->
+<!--        </ng-container>-->
 
         <!-- Taxa Desconto -->
         <ng-container matColumnDef="porcentagemDesconto">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Taxa desconto%</th>
-            <td mask="percent" prefix="%"  mat-cell *matCellDef="let modoPagamento">{{modoPagamento.porcentagemDesconto|number:'2.2-5'}}</td>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Taxa desconto% </th>
+            <td  mat-cell *matCellDef="let modoPagamento">{{modoPagamento.porcentagemDesconto}} </td>
         </ng-container>
 
         <!-- troco -->
-        <ng-container matColumnDef="troco">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Troco</th>
-            <td mat-cell *matCellDef="let modoPagamento">
-                <mat-checkbox [ngModel]="modoPagamento.troco" [disabled]="true"></mat-checkbox>
-            </td>
-        </ng-container>
+<!--        <ng-container matColumnDef="troco">-->
+<!--            <th mat-header-cell *matHeaderCellDef mat-sort-header>Troco</th>-->
+<!--            <td mat-cell *matCellDef="let modoPagamento">-->
+<!--                <mat-checkbox [ngModel]="modoPagamento.troco" [disabled]="true"></mat-checkbox>-->
+<!--            </td>-->
+<!--        </ng-container>-->
 
         <!-- a vista -->
         <ng-container matColumnDef="aVista">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>A vista</th>
             <td mat-cell *matCellDef="let modoPagamento">
-                <mat-checkbox [ngModel]="modoPagamento.aVista" [disabled]="true"></mat-checkbox>
+                <mat-checkbox [ngModel]="modoPagamento.aVista" [disabled]="true" ></mat-checkbox>
             </td>
         </ng-container>
 
