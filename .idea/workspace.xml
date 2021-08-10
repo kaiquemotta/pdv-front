@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="Arrumando modos de pagamentos">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.ts" afterDir="false" />
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="finalizando inicio dos pagamentos">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -113,7 +121,7 @@
       <workItem from="1627577237656" duration="3753000" />
       <workItem from="1628033141301" duration="6524000" />
       <workItem from="1628105016635" duration="11071000" />
-      <workItem from="1628542199475" duration="3208000" />
+      <workItem from="1628542199475" duration="8036000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -206,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628036494565</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finalizando inicio dos pagamentos">
+      <created>1628557157897</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1628557157897</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +249,8 @@
     <MESSAGE value="init pagamentos 2" />
     <MESSAGE value="init pagamentos 3" />
     <MESSAGE value="Arrumando modos de pagamentos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando modos de pagamentos" />
+    <MESSAGE value="finalizando inicio dos pagamentos" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizando inicio dos pagamentos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

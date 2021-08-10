@@ -33,7 +33,7 @@ export class VendaService {
     }
 
     findAll(): Observable<VendaModel[]> {
-        return this.http.get<VendaModel[]>(this.baseUrl).pipe(
+        return this.http.get<VendaModel[]>(this.baseUrl+"/emAberto").pipe(
             map(obj => obj),
             catchError(e => this.errorHandler(e))
         )
@@ -66,5 +66,14 @@ export class VendaService {
     errorHandler(e: any): Observable<any> {
         this.mostrarMessagem('Ocorreu um erro!', true)
         return EMPTY
+    }
+
+    finalizaVenda(id: string): Observable<VendaModel> {
+        const url = `${this.baseUrl}/finaliza/${id}`
+        console.log(url)
+        return this.http.put<VendaModel>(url,null).pipe(
+            map(obj => obj),
+            catchError(e => this.errorHandler(e))
+        )
     }
 }
