@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="init pagamentos 3">
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="Arrumando modos de pagamentos">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-delete/venda-delete.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda-update/venda-update.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +111,9 @@
       <workItem from="1625534192127" duration="141000" />
       <workItem from="1626179322758" duration="2170000" />
       <workItem from="1627577237656" duration="3753000" />
-      <workItem from="1628033141301" duration="2604000" />
+      <workItem from="1628033141301" duration="6524000" />
+      <workItem from="1628105016635" duration="11071000" />
+      <workItem from="1628542199475" duration="3208000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -194,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624886694789</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Arrumando modos de pagamentos">
+      <created>1628036494565</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1628036494565</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +233,8 @@
     <MESSAGE value="init pagamentos" />
     <MESSAGE value="init pagamentos 2" />
     <MESSAGE value="init pagamentos 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="init pagamentos 3" />
+    <MESSAGE value="Arrumando modos de pagamentos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando modos de pagamentos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

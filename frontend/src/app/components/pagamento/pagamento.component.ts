@@ -24,7 +24,7 @@ export class PagamentoComponent implements OnInit {
     pagamentos: PagamentoModel [] = [];
     modoPagamento: any;
     restante: number;
-    troco : number;
+    troco: number;
 
 
     venda: VendaModel = {
@@ -57,6 +57,12 @@ export class PagamentoComponent implements OnInit {
 
     }
 
+    // ngOnInit(): void {
+    //
+    //     this.categoria = this.fb.group({
+    //         nome: ['', Validators.required]
+    //     })
+    // }
 
     ngOnInit(): void {
         this.pagamento = this.fb.group({
@@ -66,9 +72,9 @@ export class PagamentoComponent implements OnInit {
             restante: [{value: 0.00, disabled: true}],
             subTotal: [{value: this.venda.subTotal, disabled: true}],
             porcentagemDesconto: [{value: '', disabled: true}],
-            valorPagamento: [{value: '', disabled: true}],
+            valorPagamento: [{value: '', disabled: true}, Validators.required],
             idVenda: [{value: this.data.id, disabled: false}],
-            quantidadeParcela: [{value: '', disabled: true}],
+            quantidadeParcela: [{value: '', disabled: true}, Validators.required],
             troco: [{value: '', disabled: true}],
 
         })
@@ -76,12 +82,15 @@ export class PagamentoComponent implements OnInit {
         this.vendaFindById();
         this.findAllPagamentos();
         this.findAllModosPagamentos()
-        console.log(this.restante)
 
     }
 
     onNoClick(): void {
         this.dialogRef.close();
+    }
+
+    get c() {
+        return this.pagamento.controls
     }
 
     private findAllModosPagamentos() {
@@ -97,57 +106,42 @@ export class PagamentoComponent implements OnInit {
     }
 
     addPagamento() {
-        if (this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
-            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
-                this.pagamentoModel = pagamento
-                this.pagamentos.push({...this.pagamentoModel})
-                this.dataSource = new MatTableDataSource(this.pagamentos);
-                this.somaTroco();
-                this.restante = 0.00;
-            })
+        if (this.pagamento.invalid || this.pagamento.controls.valorPagamento.value == 0 || (this.pagamento.controls.valorPagamento.value > this.restante && !this.modoPagamento.aVista)) {
+            console.log("entrou")
+            return;
         } else {
-            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
-                this.pagamentoModel = pagamento
-                this.pagamentos.push({...this.pagamentoModel})
-                this.dataSource = new MatTableDataSource(this.pagamentos);
-                this.somaRestante();
-            })
+            if (!this.modoPagamento.aVista) {
+                this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
+                    this.pagamentoModel = pagamento
+                    this.pagamentos.push({...this.pagamentoModel})
+                    this.dataSource = new MatTableDataSource(this.pagamentos);
+                    this.calculaRestante();
+                })
+            }
+            console.log("nao entrou")
         }
-
-        this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
-            this.pagamentoModel = pagamento
-            this.pagamentos.push({...this.pagamentoModel})
-            this.dataSource = new MatTableDataSource(this.pagamentos);
-            this.somaRestante();
-        })
     }
 
 
-    private findAllPagamentos() {
+    private
+
+    findAllPagamentos() {
         this.pagamentoService.findByVendaId(this.data.id).subscribe(pagamentos => {
             this.pagamentos = pagamentos
             this.dataSource = new MatTableDataSource(this.pagamentos);
             this.somaRestante();
-
         })
     }
 
-    selectModoPgto(modoPagamento: any) {
+    selectModoPgto(modoPagamento
+                       :
+                       any
+    ) {
         this.modoPagamento = modoPagamento;
-
-        if (this.pagamentos.length > 0) {
-            this.pagamento.controls.porcentagemDesconto.disable();
-        }
-        if (modoPagamento.porcentagemDesconto > 0 && this.pagamentos.length === 0) {
-            this.pagamento.controls.porcentagemDesconto.enable();
-            this.pagamento.controls.valorPagamento.enable();
-            this.pagamento.controls.quantidadeParcela.enable();
-            this.pagamento.controls.quantidadeParcela.setValue('1');
-        } else {
-            this.pagamento.controls.valorPagamento.enable();
-            this.pagamento.controls.quantidadeParcela.enable();
-            this.pagamento.controls.quantidadeParcela.setValue('1');
-        }
+        this.pagamento.controls.porcentagemDesconto.enable();
+        this.pagamento.controls.valorPagamento.enable();
+        this.pagamento.controls.quantidadeParcela.enable();
+        this.pagamento.controls.quantidadeParcela.setValue('1');
     }
 
     recalculaTotal() {
@@ -160,10 +154,10 @@ export class PagamentoComponent implements OnInit {
             this.modoPagamentoService.mostrarMessagem("Porcentagem não permitida", true)
             this.pagamento.controls.porcentagemDesconto.setValue(0);
         }
-
     }
 
-    private somaRestante() {
+
+    somaRestante() {
         var soma = 0;
         for (let pagamento of this.pagamentos) {
             soma += pagamento.valorPagamento;
@@ -172,19 +166,41 @@ export class PagamentoComponent implements OnInit {
 
     }
 
-    private somaTroco() {
+
+    somaTroco() {
         this.pagamento.controls.troco.setValue(this.pagamento.controls.valorPagamento.value - this.restante);
-        this.troco =  this.pagamento.controls.valorPagamento.value - this.restante;
+        this.troco = this.pagamento.controls.valorPagamento.value - this.restante;
     }
 
     verificaTroco() {
-        if (this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
+        if (this.modoPagamento.aVista && this.pagamento.controls.valorPagamento.value > this.restante) {
             this.pagamento.controls.troco.setValue(this.pagamento.controls.valorPagamento.value - this.restante);
-        } else if (!this.modoPagamento.troco && this.pagamento.controls.valorPagamento.value > this.restante) {
+        } else if (this.pagamento.controls.valorPagamento.value > this.restante) {
             this.modoPagamentoService.mostrarMessagem("Valor de pagamento maior que o restante", true)
             this.pagamento.controls.valorPagamento.setValue(0.00)
         }
         console.log("troco")
         console.log(this.troco)
+    }
+
+
+    onSubmit()
+        :
+        void {
+        // Process checkout data here
+        // this.items = this.cartService.clearCart();
+        // console.warn('Your order has been submitted', this.checkoutForm.value);
+        // this.checkoutForm.reset();
+    }
+
+    private calculaRestante() {
+        if (this.pagamento.controls.valorPagamento.value <= this.restante) {
+            this.restante -= this.pagamento.controls.valorPagamento.value;
+        }
+    }
+
+    finalizaVenda() {
+
+
     }
 }

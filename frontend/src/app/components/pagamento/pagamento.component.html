@@ -1,5 +1,5 @@
 <h2 style="text-align:center">Fechamento venda</h2>
-
+<form [formGroup]="pagamento"(ngSubmit)="onSubmit()">
     <mat-card class="demo-dialog-card">
         <mat-card-content>
             <div style="display:flex ;flex-direction: row">
@@ -20,7 +20,6 @@
                            value="{{venda.subTotal | currency:'R$'}}" formControlName="subTotal">
                 </mat-form-field>
 
-
             </div>
             <div style="display:flex ;flex-direction: row">
                 <mat-form-field appearance="outline">
@@ -37,6 +36,9 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Valor Pagamento</mat-label>
                     <input matInput placeholder="R$ 10.00"  name="valorPagamento" formControlName="valorPagamento"prefix="R$ " mask="separator.2" thousandSeparator="."  (keydown.Tab)= verificaTroco()>
+                    <mat-error
+                            *ngIf="pagamento.touched || pagamento.dirty && c.valorPagamento.errors?.required">Preencha o campo Valor Pagamento
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" style="padding-left: 20px">
                     <mat-label>Restante</mat-label>
@@ -53,16 +55,16 @@
                     <input matInput placeholder="Width" name="troco" formControlName="troco"  prefix="R$ " mask="separator.2" thousandSeparator="."  value= "{{troco| currency:'R$'}}">
                 </mat-form-field>
             </div>
-
             <div class="example-button-container" style="display: flex; justify-content: flex-end">
+
+                <button class = "btnFinalizar" mat-button color="green"(click)="finalizaVenda()">Finalizar Venda</button>
+
                 <button style=" justify-content: flex-end;" mat-flat-button color="primary" (click)="addPagamento()">Add
                     Pagamento
                 </button>
-
             </div>
         </mat-card-content>
     </mat-card>
-
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 500px">
@@ -92,5 +94,6 @@
     </button>&nbsp;&nbsp;
 </div>
 
+</form>
 
 

@@ -22,7 +22,7 @@ export class ModoPagamentoCreateComponent implements OnInit {
     this.modoPagamento = this.fb.group({
       descricao: ['', Validators.required],
       // taxa: ['', [Validators.required, Validators.min(0.1)]],
-      porcentagemDesconto:['', [Validators.required, Validators.min(0.1)]],
+      porcentagemDesconto:[''],
       // troco:[false,Validators.required],
       aVista:[false,Validators.required]
 

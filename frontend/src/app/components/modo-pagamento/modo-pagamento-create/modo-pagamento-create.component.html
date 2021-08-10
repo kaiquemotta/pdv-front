@@ -24,11 +24,6 @@
         <mat-form-field appearance="outline">
             <mat-label>Taxa desconto permitido</mat-label>
             <input matInput placeholder="Ex: 0.02" name="porcentagemDesconto" formControlName="porcentagemDesconto" mask = "percent" suffix="%" separatorLimit = " 100 " >
-            <mat-error
-                    *ngIf="modoPagamento.touched || modoPagamento.dirty && c.porcentagemDesconto.errors?.required">
-                Preencha o campo
-                Taxa desconto
-            </mat-error>
         </mat-form-field>
 <!--        <mat-checkbox class="example-margin" formControlName="troco">Troco</mat-checkbox>-->
         <mat-checkbox class="example-margin" formControlName="aVista">A vista</mat-checkbox>
