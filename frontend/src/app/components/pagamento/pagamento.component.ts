@@ -52,7 +52,7 @@ export class PagamentoComponent implements OnInit {
 
     constructor(
         public dialogRef: MatDialogRef<PagamentoComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: any, private modoPagamentoService: ModoPagamentoService, private vendaService: VendaService, private pagamentoService: PagamentoService, private fb: FormBuilder,private router: Router,) {
+        @Inject(MAT_DIALOG_DATA) public data: any, private modoPagamentoService: ModoPagamentoService, private vendaService: VendaService, private pagamentoService: PagamentoService, private fb: FormBuilder, private router: Router,) {
         this.dataSource = new MatTableDataSource(this.pagamentos);
 
     }
@@ -101,18 +101,29 @@ export class PagamentoComponent implements OnInit {
     addPagamento() {
         if (this.pagamento.invalid || this.pagamento.controls.valorPagamento.value == 0
             || (this.pagamento.controls.valorPagamento.value > this.restante && !this.modoPagamento.aVista)
-            || this.pagamento.controls.valorPagamento.value > this.restante) {
+        ) {
+            this.modoPagamentoService.mostrarMessagem("Erro ao adicionar pagamento", true)
+            this.pagamento.controls.valorPagamento.setValue(0)
             return;
-        } else {
-            if (!this.modoPagamento.aVista) {
-                this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
-                    this.pagamentoModel = pagamento
-                    this.pagamentos.push({...this.pagamentoModel})
-                    this.dataSource = new MatTableDataSource(this.pagamentos);
-                    this.calculaRestante();
-                })
+        } else if (!this.modoPagamento.aVista) {
+            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
+                this.pagamentoModel = pagamento
+                this.pagamentos.push({...this.pagamentoModel})
+                this.dataSource = new MatTableDataSource(this.pagamentos);
+                this.calculaRestante();
+            })
+        } else if (this.modoPagamento.aVista) {
+            console.log("a vista")
+            if(this.pagamento.controls.valorPagamento.value > this.restante){
+                this.pagamento.controls.valorPagamento.setValue(this.restante);
             }
-            console.log("nao entrou")
+            this.pagamentoService.insert(this.pagamento.value).subscribe(pagamento => {
+                this.pagamentoModel = pagamento
+                this.pagamentos.push({...this.pagamentoModel})
+                this.dataSource = new MatTableDataSource(this.pagamentos);
+                this.calculaRestante();
+                this.verificaTroco();
+            })
         }
     }
 
@@ -130,6 +141,8 @@ export class PagamentoComponent implements OnInit {
         this.pagamento.controls.valorPagamento.enable();
         this.pagamento.controls.quantidadeParcela.enable();
         this.pagamento.controls.quantidadeParcela.setValue('1');
+        this.pagamento.controls.troco.setValue(0);
+        this.pagamento.controls.valorPagamento.setValue(0)
     }
 
     recalculaTotal() {
@@ -163,9 +176,7 @@ export class PagamentoComponent implements OnInit {
     verificaTroco() {
         if (this.modoPagamento.aVista && this.pagamento.controls.valorPagamento.value > this.restante && this.restante != 0) {
             this.pagamento.controls.troco.setValue(this.pagamento.controls.valorPagamento.value - this.restante);
-        } else if (this.pagamento.controls.valorPagamento.value > this.restante) {
-            this.modoPagamentoService.mostrarMessagem("Valor de pagamento maior que o restante", true)
-            this.pagamento.controls.valorPagamento.setValue(0.00)
+            // this.pagamento.controls.valorPagamento.setValue(0.00)
         }
     }
 
@@ -182,14 +193,18 @@ export class PagamentoComponent implements OnInit {
     private calculaRestante() {
         if (this.pagamento.controls.valorPagamento.value <= this.restante) {
             this.restante -= this.pagamento.controls.valorPagamento.value;
+        } else if (this.pagamento.controls.valorPagamento.value >= this.restante && this.modoPagamento.aVista) {
+            this.restante = 0;
         }
     }
 
     finalizaVenda() {
-        this.vendaService.finalizaVenda(this.data.id).subscribe(venda => {
-            this.vendaService.mostrarMessagem('Venda criada com sucesso!', false)
-            this.dialogRef.close();
-            this.router.navigate(["/venda/read"]);
-        })
+        if (this.restante == 0) {
+            this.vendaService.finalizaVenda(this.data.id).subscribe(venda => {
+                this.vendaService.mostrarMessagem('Venda criada com sucesso!', false)
+                this.dialogRef.close();
+                this.router.navigate(["/venda/read"]);
+            })
+        }
     }
 }

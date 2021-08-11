@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {MatSidenav} from "@angular/material/sidenav";
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
+    @ViewChild('sidenav') sidenav: MatSidenav;
+    isExpanded = true;
+    showSubmenu: boolean = false;
+    isShowing = false;
+    showSubmenuCaixa: boolean = false;
 
-  constructor() { }
+    mouseenter() {
+        if (!this.isExpanded) {
+            this.isShowing = true;
+        }
+    }
 
-  ngOnInit(): void {
-  }
-
+    mouseleave() {
+        if (!this.isExpanded) {
+            this.isShowing = false;
+        }
+    }
 }

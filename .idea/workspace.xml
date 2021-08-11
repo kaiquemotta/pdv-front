@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="finalizando inicio dos pagamentos">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/relatorio-venda/relatorio-venda.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/relatorio-venda/relatorio-venda.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/views/relatorio-venda/relatorio-venda.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorios/relatorios.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +133,7 @@
       <workItem from="1627577237656" duration="3753000" />
       <workItem from="1628033141301" duration="6524000" />
       <workItem from="1628105016635" duration="11071000" />
-      <workItem from="1628542199475" duration="8036000" />
+      <workItem from="1628542199475" duration="32631000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -221,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628557157897</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="finalizando inicio dos pagamentos">
+      <created>1628564902750</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1628564902752</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

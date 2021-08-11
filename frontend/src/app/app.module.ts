@@ -44,20 +44,26 @@ import {VendaReadComponent} from './components/venda/venda-read/venda-read.compo
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import { DialogComponent } from './components/dialog/dialog/dialog.component';
+import {DialogComponent} from './components/dialog/dialog/dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {VendaUpdateComponent} from "./components/venda/venda-update/venda-update.component";
-import { PagamentoComponent } from './components/pagamento/pagamento.component';
-import { ModoPagamentoComponent } from './views/modo-pagamento/modo-pagamento.component';
-import { ModoPagamentoReadComponent } from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
-import { ModoPagamentoUpdateComponent } from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
-import { ModoPagamentoCreateComponent } from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { RelatoriosComponent } from './reports/relatorios/relatorios.component';
+import {PagamentoComponent} from './components/pagamento/pagamento.component';
+import {ModoPagamentoComponent} from './views/modo-pagamento/modo-pagamento.component';
+import {ModoPagamentoReadComponent} from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
+import {ModoPagamentoUpdateComponent} from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
+import {ModoPagamentoCreateComponent} from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
+import {NgxMaskModule, IConfig} from 'ngx-mask';
+import {RelatoriosComponent} from './reports/relatorios/relatorios.component';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
+import { RelatorioVendaComponent } from './views/relatorio-venda/relatorio-venda.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { AbreCaixaComponent } from './components/caixa/abre-caixa/abre-caixa.component';
+import { CriaCaixaComponent } from './views/caixa/cria-caixa/cria-caixa.component';
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
 };
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -85,7 +91,10 @@ const maskConfig: Partial<IConfig> = {
         ModoPagamentoReadComponent,
         ModoPagamentoUpdateComponent,
         ModoPagamentoCreateComponent,
-        RelatoriosComponent
+        RelatoriosComponent,
+        RelatorioVendaComponent,
+        AbreCaixaComponent,
+        CriaCaixaComponent,
 
     ],
     imports: [
@@ -112,6 +121,9 @@ const maskConfig: Partial<IConfig> = {
         MatCheckboxModule,
         MatDialogModule,
         NgxMaskModule.forRoot(maskConfig),
+        BrowserModule,
+        PdfViewerModule,
+        MatMenuModule
     ],
     providers: [],
     bootstrap: [AppComponent]
