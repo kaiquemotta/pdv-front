@@ -20,6 +20,7 @@ import {ModoPagamentoUpdateComponent} from "./components/modo-pagamento/modo-pag
 import {RelatoriosComponent} from "./reports/relatorios/relatorios.component";
 import {RelatorioVendaComponent} from "./views/relatorio-venda/relatorio-venda.component";
 import {CriaCaixaComponent} from "./views/caixa/cria-caixa/cria-caixa.component";
+import {FechamentoCaixaComponent} from "./views/caixa/fechamento-caixa/fechamento-caixa.component";
 
 const routes: Routes = [
     {
@@ -104,6 +105,12 @@ const routes: Routes = [
         path: "abre-caixa",
         component: CriaCaixaComponent
     },
+    {
+        path: "fecha-caixa",
+        component: FechamentoCaixaComponent
+    },
+
+
 ];
 
 @NgModule({

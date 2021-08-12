@@ -22,7 +22,7 @@ export class AbreCaixaComponent implements OnInit {
 
     this.caixa = this.fb.group({
       nome: ['', Validators.required],
-      valorInicial: ['', Validators.required]
+      valorAbertura: ['', Validators.required]
 
     })
   }
@@ -31,7 +31,7 @@ export class AbreCaixaComponent implements OnInit {
     return this.caixa.controls
   }
 
-  criarCategoria(): void {
+  criarCaixa(): void {
 
     if (this.caixa.invalid) {
       return;
@@ -41,7 +41,9 @@ export class AbreCaixaComponent implements OnInit {
     this.caixaService.insert(this.caixa.value).subscribe(() => {
       this.caixaService.mostrarMessagem('Caixa criada com sucesso!', false)
       this.router.navigate(["/caixa"]);
+
     })
+
   }
 
   cancelar(): void {

@@ -12,14 +12,18 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Valor Inical</mat-label>
-            <input matInput prefix="R$ " mask="separator.2" thousandSeparator="." placeholder="Ex: R$ 10.0" name="valorInicial"
-                   formControlName="valorInicial"
+            <input matInput prefix="R$ " mask="separator.2" thousandSeparator="." placeholder="Ex: R$ 10.0" name="valorAbertura"
+                   formControlName="valorAbertura"
                    type="text" min="0">
+            <mat-error
+                    *ngIf="caixa.touched || caixa.dirty && c.valorAbertura.errors?.required">Preencha o campo
+               Valor Inicial
+            </mat-error>
         </mat-form-field>
 
     </form>
 
-    <button mat-raised-button [disabled]="!caixa.valid" (click)="criarCategoria()" color="primary">
+    <button mat-raised-button [disabled]="!caixa.valid" (click)="criarCaixa()" color="primary">
         Salvar
     </button>
 

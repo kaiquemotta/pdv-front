@@ -68,4 +68,14 @@ export class CaixaService {
         this.mostrarMessagem('Ocorreu um erro!', true)
         return EMPTY
     }
+
+    getCaixaFechar(): Observable<CaixaModel>{
+        const url =`${this.baseUrl}/caixaFechamento`
+        console.log(url)
+        return this.http.get<CaixaModel>(url).pipe(
+            map(obj => obj),
+            catchError(e => this.errorHandler(e))
+        )
+    }
+
 }

@@ -59,6 +59,8 @@ import { RelatorioVendaComponent } from './views/relatorio-venda/relatorio-venda
 import {MatMenuModule} from '@angular/material/menu';
 import { AbreCaixaComponent } from './components/caixa/abre-caixa/abre-caixa.component';
 import { CriaCaixaComponent } from './views/caixa/cria-caixa/cria-caixa.component';
+import { FechaCaixaComponent } from './components/caixa/fecha-caixa/fecha-caixa.component';
+import { FechamentoCaixaComponent } from './views/caixa/fechamento-caixa/fechamento-caixa.component';
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -95,6 +97,8 @@ const maskConfig: Partial<IConfig> = {
         RelatorioVendaComponent,
         AbreCaixaComponent,
         CriaCaixaComponent,
+        FechaCaixaComponent,
+        FechamentoCaixaComponent,
 
     ],
     imports: [
