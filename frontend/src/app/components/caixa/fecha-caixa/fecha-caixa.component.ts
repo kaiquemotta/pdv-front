@@ -25,6 +25,7 @@ export class FechaCaixaComponent implements OnInit {
     ngOnInit(): void {
 
         this.caixa = this.fb.group({
+            id: [{value: ''}],
             nome: [{value: '', disabled: true}],
             data: [{value: '', disabled: true}],
             valorInicial: [{value: '', disabled: true}],
@@ -44,15 +45,20 @@ export class FechaCaixaComponent implements OnInit {
         return this.caixa.controls
     }
 
-    criarCaixa(): void {
+    fecharCaixa(): void {
 
+        console.log(this.caixa)
         if (this.caixa.invalid) {
             return;
         }
 
+        this.caixaF.diferencaAvista = this.caixa.controls.diferencaAvista.value.replace('R$ ', '');
+        this.caixaF.diferencaCartao = this.caixa.controls.diferencaCartao.value.replace('R$ ', '');
+        this.caixaF.nome = this.caixa.controls.nome.value;
+
         //subscribe depois que ele recebe o retorno do back-end ele chama essa arrow function
-        this.caixaService.insert(this.caixa.value).subscribe(() => {
-            this.caixaService.mostrarMessagem('Caixa criada com sucesso!', false)
+        this.caixaService.update(this.caixaF).subscribe(() => {
+            this.caixaService.mostrarMessagem('Caixa fechado com sucesso!', false)
             this.router.navigate(["/caixa"]);
 
         })
@@ -62,11 +68,23 @@ export class FechaCaixaComponent implements OnInit {
     getCaixaFechar() {
         this.caixaService.getCaixaFechar().subscribe(caixa => {
             this.caixaF = caixa;
-            this.caixa.controls.nome.value.setValue(this.caixaF)
-            console.log(this.caixaF)
+            this.caixa.controls.id.setValue(this.caixaF.id)
+            this.caixa.controls.nome.setValue(this.caixaF.nome)
+            this.caixa.controls.valorInicial.setValue(this.caixaF.valorAbertura)
+            this.caixa.controls.valorTotalCaixa.setValue(this.caixaF.valorFechamento)
+            this.caixa.controls.data.setValue(this.caixaF.dataAbertura)
+            this.caixa.controls.valorTotalAvista.setValue(this.caixaF.valorFechamentoAvista)
+            this.caixa.controls.valorTotalCartao.setValue(this.caixaF.valorFechamentoCartao)
         })
     }
     cancelar(): void {
         this.router.navigate(["/"]);
+    }
+
+    verificaDiferenca() {
+        this.caixa.controls.diferencaAvista.setValue('R$ ' + (this.caixa.controls.valorTotalAvista.value - this.caixa.controls.valorFechamentoAvista.value));
+        this.caixa.controls.diferencaCartao.setValue('R$ ' + (this.caixa.controls.valorTotalCartao.value - this.caixa.controls.valorTotalCartaoFechamento.value));
+
+        console.log(this.caixa.controls.diferencaAvista.value)
     }
 }

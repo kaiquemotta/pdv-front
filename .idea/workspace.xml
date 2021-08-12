@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="melhoria nav">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.ts" afterDir="false" />
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="realizando fechamento de caixa">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/abre-caixa/abre-caixa.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/template/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,17 +61,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -124,7 +115,8 @@
       <workItem from="1627577237656" duration="3753000" />
       <workItem from="1628033141301" duration="6524000" />
       <workItem from="1628105016635" duration="11071000" />
-      <workItem from="1628542199475" duration="40415000" />
+      <workItem from="1628542199475" duration="46379000" />
+      <workItem from="1628734619582" duration="2136000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -245,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628719413860</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="realizando fechamento de caixa">
+      <created>1628727151946</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1628727151946</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +275,8 @@
     <MESSAGE value="finalizando inicio dos pagamentos" />
     <MESSAGE value="iniciando caixa" />
     <MESSAGE value="melhoria nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="melhoria nav" />
+    <MESSAGE value="realizando fechamento de caixa" />
+    <option name="LAST_COMMIT_MESSAGE" value="realizando fechamento de caixa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -61,6 +61,8 @@ import { AbreCaixaComponent } from './components/caixa/abre-caixa/abre-caixa.com
 import { CriaCaixaComponent } from './views/caixa/cria-caixa/cria-caixa.component';
 import { FechaCaixaComponent } from './components/caixa/fecha-caixa/fecha-caixa.component';
 import { FechamentoCaixaComponent } from './views/caixa/fechamento-caixa/fechamento-caixa.component';
+import { RelatorioCaixaComponent } from './reports/relatorio-caixa/relatorio-caixa.component';
+import { ComprovanteVendaComponent } from './components/comprovante-venda/comprovante-venda.component'; //add this line
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -99,6 +101,8 @@ const maskConfig: Partial<IConfig> = {
         CriaCaixaComponent,
         FechaCaixaComponent,
         FechamentoCaixaComponent,
+        RelatorioCaixaComponent,
+        ComprovanteVendaComponent,
 
     ],
     imports: [
@@ -127,7 +131,8 @@ const maskConfig: Partial<IConfig> = {
         NgxMaskModule.forRoot(maskConfig),
         BrowserModule,
         PdfViewerModule,
-        MatMenuModule
+        MatMenuModule,
+
     ],
     providers: [],
     bootstrap: [AppComponent]

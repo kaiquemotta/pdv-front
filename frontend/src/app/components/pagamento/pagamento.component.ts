@@ -203,7 +203,7 @@ export class PagamentoComponent implements OnInit {
             this.vendaService.finalizaVenda(this.data.id).subscribe(venda => {
                 this.vendaService.mostrarMessagem('Venda criada com sucesso!', false)
                 this.dialogRef.close();
-                this.router.navigate(["/venda/read"]);
+                this.router.navigate(["imprime-comprovante"]);
             })
         }
     }

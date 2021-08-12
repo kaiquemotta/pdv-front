@@ -5,5 +5,8 @@ export interface CaixaModel {
     valorFechamento?: number
     dataAbertura:string,
     dataFechamento:string,
-
+    valorFechamentoAvista?: number,
+    valorFechamentoCartao?: number,
+    diferencaAvista?: number,
+    diferencaCartao?: number
 }
