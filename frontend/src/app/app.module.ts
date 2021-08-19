@@ -52,17 +52,18 @@ import {ModoPagamentoComponent} from './views/modo-pagamento/modo-pagamento.comp
 import {ModoPagamentoReadComponent} from './components/modo-pagamento/modo-pagamento-read/modo-pagamento-read.component';
 import {ModoPagamentoUpdateComponent} from './components/modo-pagamento/modo-pagamento-update/modo-pagamento-update.component';
 import {ModoPagamentoCreateComponent} from './components/modo-pagamento/modo-pagamento-create/modo-pagamento-create.component';
-import {NgxMaskModule, IConfig} from 'ngx-mask';
+import {IConfig, NgxMaskModule} from 'ngx-mask';
 import {RelatoriosComponent} from './reports/relatorios/relatorios.component';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
-import { RelatorioVendaComponent } from './views/relatorio-venda/relatorio-venda.component';
+import {RelatorioVendaComponent} from './views/relatorio-venda/relatorio-venda.component';
 import {MatMenuModule} from '@angular/material/menu';
-import { AbreCaixaComponent } from './components/caixa/abre-caixa/abre-caixa.component';
-import { CriaCaixaComponent } from './views/caixa/cria-caixa/cria-caixa.component';
-import { FechaCaixaComponent } from './components/caixa/fecha-caixa/fecha-caixa.component';
-import { FechamentoCaixaComponent } from './views/caixa/fechamento-caixa/fechamento-caixa.component';
-import { RelatorioCaixaComponent } from './reports/relatorio-caixa/relatorio-caixa.component';
-import { ComprovanteVendaComponent } from './components/comprovante-venda/comprovante-venda.component'; //add this line
+import {AbreCaixaComponent} from './components/caixa/abre-caixa/abre-caixa.component';
+import {CriaCaixaComponent} from './views/caixa/cria-caixa/cria-caixa.component';
+import {FechaCaixaComponent} from './components/caixa/fecha-caixa/fecha-caixa.component';
+import {FechamentoCaixaComponent} from './views/caixa/fechamento-caixa/fechamento-caixa.component';
+import {RelatorioCaixaComponent} from './reports/relatorio-caixa/relatorio-caixa.component';
+import {ComprovanteVendaComponent} from './components/comprovante-venda/comprovante-venda.component';
+import {ThermalPrintModule} from "ng-thermal-print"; //add this line
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -104,6 +105,7 @@ const maskConfig: Partial<IConfig> = {
         RelatorioCaixaComponent,
         ComprovanteVendaComponent,
 
+
     ],
     imports: [
         BrowserModule,
@@ -132,6 +134,8 @@ const maskConfig: Partial<IConfig> = {
         BrowserModule,
         PdfViewerModule,
         MatMenuModule,
+        ThermalPrintModule //add this line
+
 
     ],
     providers: [],

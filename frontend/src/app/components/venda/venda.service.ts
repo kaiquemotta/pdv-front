@@ -68,7 +68,7 @@ export class VendaService {
         return EMPTY
     }
 
-    finalizaVenda(id: string): Observable<VendaModel> {
+        finalizaVenda(id: string): Observable<VendaModel> {
         const url = `${this.baseUrl}/finaliza/${id}`
         console.log(url)
         return this.http.put<VendaModel>(url,null).pipe(

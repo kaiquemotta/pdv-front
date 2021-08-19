@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="realizando fechamento de caixa">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/reports/relatorio-caixa/relatorio-caixa.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/caixa.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/caixa/fecha-caixa/fecha-caixa.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/pagamento/pagamento.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,8 @@
       <workItem from="1628033141301" duration="6524000" />
       <workItem from="1628105016635" duration="11071000" />
       <workItem from="1628542199475" duration="46379000" />
-      <workItem from="1628734619582" duration="2136000" />
+      <workItem from="1628734619582" duration="4075000" />
+      <workItem from="1629336808738" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -244,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628727151946</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="realizando fechamento de caixa">
+      <created>1628736877500</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1628736877500</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
