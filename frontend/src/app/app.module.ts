@@ -62,8 +62,6 @@ import {CriaCaixaComponent} from './views/caixa/cria-caixa/cria-caixa.component'
 import {FechaCaixaComponent} from './components/caixa/fecha-caixa/fecha-caixa.component';
 import {FechamentoCaixaComponent} from './views/caixa/fechamento-caixa/fechamento-caixa.component';
 import {RelatorioCaixaComponent} from './reports/relatorio-caixa/relatorio-caixa.component';
-import {ComprovanteVendaComponent} from './components/comprovante-venda/comprovante-venda.component';
-import {ThermalPrintModule} from "ng-thermal-print"; //add this line
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -103,7 +101,6 @@ const maskConfig: Partial<IConfig> = {
         FechaCaixaComponent,
         FechamentoCaixaComponent,
         RelatorioCaixaComponent,
-        ComprovanteVendaComponent,
 
 
     ],
@@ -134,7 +131,6 @@ const maskConfig: Partial<IConfig> = {
         BrowserModule,
         PdfViewerModule,
         MatMenuModule,
-        ThermalPrintModule //add this line
 
 
     ],

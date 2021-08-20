@@ -5,13 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="realizando fechamento de caixa">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/venda/venda.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/comprovante-venda/comprovante-venda.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/bundles/ng2-currency-mask.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/bundles/ng2-currency-mask.umd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/bundles/ng2-currency-mask.umd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/bundles/ng2-currency-mask.umd.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/currency-mask.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/currency-mask.directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/currency-mask.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/input.handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/input.manager.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/lib/input.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/ng2-currency-mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/esm2015/public-api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/fesm2015/ng2-currency-mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/fesm2015/ng2-currency-mask.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/currency-mask.config.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/currency-mask.directive.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/currency-mask.module.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/input.handler.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/input.manager.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/lib/input.service.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/ng2-currency-mask.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/ng2-currency-mask.metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ng2-currency-mask/public-api.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/bundles/ngx-mask.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/bundles/ngx-mask.umd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/custom-keyboard-event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/mask-applier.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/mask.directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/mask.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/mask.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/lib/ngx-mask.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/esm2015/ngx-mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/fesm2015/ngx-mask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/fesm2015/ngx-mask.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/config.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/custom-keyboard-event.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/mask-applier.service.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/mask.directive.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/mask.pipe.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/mask.service.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/lib/ngx-mask.module.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/ngx-mask.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/ngx-mask.metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ngx-mask/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/CopyrightNotice.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/modules/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/modules/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +119,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="ts.external.directory.path" value="C:\Users\kaiqu\Documents\ProjetoAngular\CRUD_produto_springboot_angular\frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -55,6 +128,19 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -111,7 +197,7 @@
       <workItem from="1628105016635" duration="11071000" />
       <workItem from="1628542199475" duration="46379000" />
       <workItem from="1628734619582" duration="4075000" />
-      <workItem from="1629336808738" duration="1622000" />
+      <workItem from="1629336808738" duration="4676000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -246,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628736877500</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="realizando fechamento de caixa">
+      <created>1629417339040</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629417339040</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
