@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="arrumando estrutura projeto">
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="arrumando estrutura projeto 1">
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/pagamento/pagamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pagamento/pagamento.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,18 @@
       <recent name="C:\Users\kaiqu\Documents\ProjetoAngular\CRUD_produto_springboot_angular\frontend\src\app\components\venda\venda-create" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -112,7 +124,8 @@
       <workItem from="1629336808738" duration="4676000" />
       <workItem from="1629421546740" duration="383000" />
       <workItem from="1629421958264" duration="111000" />
-      <workItem from="1629422092582" duration="2035000" />
+      <workItem from="1629422092582" duration="3245000" />
+      <workItem from="1629428274537" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -275,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629422278385</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="arrumando estrutura projeto 1">
+      <created>1629427046569</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1629427046569</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +328,8 @@
     <MESSAGE value="melhoria nav" />
     <MESSAGE value="realizando fechamento de caixa" />
     <MESSAGE value="arrumando estrutura projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="arrumando estrutura projeto" />
+    <MESSAGE value="arrumando estrutura projeto 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="arrumando estrutura projeto 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
