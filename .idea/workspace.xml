@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="add dependencia">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="heroku">
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
->>>>>>> 91ca7575b0da8937386396f36464668c175eb111
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,21 +285,12 @@
       <option name="project" value="LOCAL" />
       <updated>1629427046569</updated>
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00025" summary="add dependencia">
-      <created>1630018025132</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1630018025132</updated>
-=======
     <task id="LOCAL-00025" summary="heroku">
       <created>1629430077172</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
       <updated>1629430077172</updated>
->>>>>>> 91ca7575b0da8937386396f36464668c175eb111
     </task>
     <option name="localTasksCounter" value="26" />
     <servers />
@@ -340,13 +326,8 @@
     <MESSAGE value="realizando fechamento de caixa" />
     <MESSAGE value="arrumando estrutura projeto" />
     <MESSAGE value="arrumando estrutura projeto 1" />
-<<<<<<< HEAD
-    <MESSAGE value="add dependencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dependencia" />
-=======
     <MESSAGE value="heroku" />
     <option name="LAST_COMMIT_MESSAGE" value="heroku" />
->>>>>>> 91ca7575b0da8937386396f36464668c175eb111
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
