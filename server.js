@@ -1,21 +1,20 @@
-// importar express
+function requireHTTPS(req, res, next) {
+    // The 'x-forwarded-proto' check is for Heroku
+    if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
+        return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+}
+
+
 const express = require('express');
-// iniciar express
 const app = express();
-// nome da pasta no dist que sera feito o build
-const appName = 'frontend';
-// local onde build ira gerar os arquivos
-const outputPath = `${__dirname}/dist/${appName}`;
 
-// seta o diretorio de build para servir o conteudo Angular
-app.use(express.static(outputPath));
-// redirecionar qualquer requisicao para o index.html
-app.get('/*', (req, res) => {
-    res.sendFile(`${outputPath}/index.html`);
-});
-// ouvir a porta que o Heroku disponibilizar
-app.listen(process.env.PORT);
+app.use(requireHTTPS);
+app.use(express.static('./dist/frontend'));
 
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/frontend/'}),
+);
 
-
-
+app.listen(process.env.PORT || 8080);
