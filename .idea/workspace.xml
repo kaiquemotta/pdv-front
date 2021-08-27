@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="arrumando erro compilacao">
+    <list default="true" id="143d1781-a7af-4ef0-bc1b-69b9064fcf40" name="Default Changelist" comment="tentando subir heroku">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +121,7 @@
       <workItem from="1629421958264" duration="111000" />
       <workItem from="1629422092582" duration="3245000" />
       <workItem from="1629428274537" duration="2365000" />
+      <workItem from="1630023644866" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="init item venda">
       <created>1621650928317</created>
@@ -313,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630022278165</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="tentando subir heroku">
+      <created>1630023818218</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1630023818218</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +355,8 @@
     <MESSAGE value="arrumando estrutura projeto 1" />
     <MESSAGE value="heroku" />
     <MESSAGE value="arrumando erro compilacao" />
-    <option name="LAST_COMMIT_MESSAGE" value="arrumando erro compilacao" />
+    <MESSAGE value="tentando subir heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="tentando subir heroku" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
